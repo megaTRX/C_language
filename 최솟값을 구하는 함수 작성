@@ -1,0 +1,20 @@
+// 세 값의 최솟값을 구하는 min3 함수를 작성
+#include <stdio.h>
+int min3(int a, int b, int c)
+{
+	int min = a;
+	if (b < min) min = b;
+	if (c < min) min = c;
+
+	return min;
+}
+
+int main(void) {
+	int a, b, c;
+	printf("a값을 입력하세요: "); scanf_s("%d", &a);
+	printf("b값을 입력하세요: "); scanf_s("%d", &b);
+	printf("c값을 입력하세요: "); scanf_s("%d", &c);
+	
+	printf("최솟값은 %d입니다.\n", min3(a, b, c));
+	return 0;
+}
