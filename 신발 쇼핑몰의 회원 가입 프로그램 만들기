@@ -1,0 +1,47 @@
+/* 신발 쇼핑몰의 회원 가입 프로그램 만들기
+출력결과
+--- 회원 정보 ---
+이름 :
+아이디 :
+나이 :
+생일 :
+신발 크기 : */
+
+#include <stdio.h>
+
+int main(void) {
+	// 이름
+	char name[256];
+	printf("이름을 입력하세요 : ");
+	scanf_s("%s", name, sizeof(name));
+
+	// 아이디
+	char id[256];
+	printf("아이디를 입력하세요: ");
+	scanf_s("%s", id, sizeof(id));
+
+	// 나이
+	int age;
+	printf("나이를 입력하세요: ");
+	scanf_s("%d", &age);
+
+	// 생일
+	char birthday[256];
+	printf("생일을 입력하세요(예: 1990-01-01):");
+	scanf_s("%s", birthday, sizeof(birthday));
+
+	// 신발 크기
+	int shoe_size;
+	printf("신발 크기를 입력하세요: ");
+	scanf_s("%d", &shoe_size);
+
+	// 출력하기
+	printf("\n\n --- 회원 정보---\n\n");
+	printf("이름 : %s\n", name);
+	printf("아이디 : %s\n", id);
+	printf("나이 : %d\n", age);
+	printf("생일: %s\n", birthday);
+	printf("신발 크기 : %d\n", shoe_size);
+
+
+}
