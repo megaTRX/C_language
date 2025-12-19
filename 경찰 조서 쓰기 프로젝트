@@ -1,0 +1,53 @@
+/* 프로젝트 : 경찰 조서 쓰기 
+총 5가지 질문하고 답변을 입력받도록 작성하기
+이름이 뭐에요?
+몇 살이에요?
+몸무게는 몇 kg이에요?
+키는 몇 cm예요?
+어떤 범죄를 저질렀어요?
+
+--- 범죄자 정보 ---
+이름 : OOO
+나이 : OO
+몸무게 : OO(소숫점 한자리까지)
+키 : OO(소숫점 한자리까지)
+범죄명 : OOOO */
+
+#include <stdio.h>
+
+int main(void) {
+	int age;
+	char name[256];
+	float weight;
+	float height;
+	char crime[256];
+
+	// 이름 조사
+	printf("이름이 뭐에요?");
+	scanf_s("%s", name, sizeof(name));
+
+	// 나이 조사
+	printf("몇 살이에요?");
+	scanf_s("%d", &age);
+
+	// 몸무게 조사
+	printf("몸무게는 몇 kg이에요? ");
+	scanf_s("%f", &weight);
+
+	// 키 조사
+	printf("키는 몇 cm예요? ");
+	scanf_s("%f", &height);
+
+	// 범죄명 조사
+	printf("어떤 범죄를 저질렀어요? ");
+	scanf_s("%s", crime, sizeof(crime));
+
+	printf("\n\n--- 범죄자 정보 ---\n\n");
+	printf("이름 : %s\n", name);
+	printf("나이 : %d\n", age);
+	printf("몸무게: %.1f\n", weight);
+	printf("키 : %.1f\n", height);
+	printf("범죄명 : %s\n", crime);
+
+	return 0;
+}
